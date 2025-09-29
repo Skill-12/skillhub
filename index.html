@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <title>Skillhub</title>
+ 
+</head>
+<body>
+
+  
+
+<!-- Up Arrow Button -->
+<button id="scrollTopBtn" title="Go to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<div class="container-fluid navbar">
+  <!-- Logo -->
+  <div class="nav-logo">
+    <img src="assets/WhatsApp Image 2025-09-18 at 12.53.00.jpeg" alt="Logo">
+  </div>
+
+  <!-- Right section: menu + hamburger -->
+  <div class="nav-right">
+    <!-- Menu -->
+    <div class="nav-menu" id="menu">
+      <a href="#about">About</a>
+      <a href="#enroll">Enroll</a>
+      <a href="#program">Program</a>
+      <a href="#awards">Awards&Rewards</a>
+       <a href="#register">Registration</a>
+      <a href="#joinus">Join us</a>
+    </div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+<style>
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Logo */
+.nav-logo img {
+  width: 100%;
+  max-width: 250px; /* bigger logo on large screens */
+  height: auto;
+}
+
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  flex: 1; /* take remaining space */
+}
+
+/* Menu links */
+.nav-menu {
+  display: flex;
+  justify-content: space-between; /* spread items evenly */
+  align-items: center;
+  flex: 1; /* occupy all remaining space beside logo */
+  margin-left: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ff9800;
+}
+
+/* Hamburger (hidden by default) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ✅ Tablet & Mobile */
+@media (max-width: 992px) {
+  .nav-menu {
+    display: none; /* hide menu */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #333;
+    padding: 15px;
+    border-radius: 8px;
+    gap: 15px;
+    width: 220px;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    display: flex; /* show menu when toggled */
+  }
+
+  .hamburger {
+    display: flex; /* show hamburger */
+    margin-left: auto;
+  }
+}
+
+/* ✅ Small Mobile (below 576px) */
+@media (max-width: 576px) {
+  .nav-menu {
+    width: 100%; /* full width */
+    right: 0;
+    left: 0;
+    border-radius: 0;
+    text-align: center;
+  }
+
+    .nav-logo img {
+    max-width: 160px; /* slightly smaller on mobiles */
+  }
+}
+</style>
+
+
+
+
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+<style>
+/* Navbar wrapper */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #333;
+  color: white;
+  position: relative;
+}
+
+/* Logo */
+.nav-logo img {
+  width: 80%;
+  height: auto;
+}
+
+/* Right section */
+.nav-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Menu links */
+.nav-menu {
+  width: 100%;
+  padding: 0 3%;;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ff9800;
+}
+
+/* Hamburger (hidden by default) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ✅ Responsive for smaller screens */
+@media (max-width: 992px) {
+  .nav-menu {
+    display: none; /* hide menu */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* below navbar */
+    right: 20px;
+    background: #333;
+    padding: 15px;
+    border-radius: 8px;
+    gap: 15px;
+    width: 200px;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    display: flex; /* show menu when toggled */
+  }
+
+  .hamburger {
+    display: flex; /* show hamburger */
+    margin-left: auto;
+  }
+}
+ 
+</style>
+
+
+
+<section class="welcome">
+  <div class="welcome-container">
+    <!-- Text Content -->
+    <div class="welcome-text">
+      <h1>RoyalEv Green Earth  Awareness Program</h1>
+      <p>
+        An exciting initiative designed for students of <br> Class VI to X, 
+        where learning meets fun!
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Container with background image */
+.welcome-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* full screen height */
+  background: url("assets/slide_v4-1 (1).jpg") no-repeat center center;
+  background-size: cover; /* ✅ fills screen */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 8%;
+  color: #fff;
+}
+
+/* Text Content */
+.welcome-text {
+  max-width: 700px;
+}
+
+.welcome-text h1 {
+  font-family: playfair display;
+  font-size: 5rem;
+  font-weight: 600;
+  margin-bottom: 5%;
+  line-height: 1;
+}
+
+.welcome-text p {
+  font-size: 1.7rem;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 1200px) {
+  .welcome-text h1 {
+    font-size: 3.5rem;
+  }
+  .welcome-text p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 998px) {
+  .welcome-container {
+    min-height: auto;
+    padding: 80px 20px;
+    justify-content: center; /* center text */
+    text-align: center;
+  }
+
+  .welcome-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .welcome-text p {
+    font-size: 0.7rem;
+  }
+}
+</style>
+
+
+
+
+    
+
+    
+  
+
+
+
+<!-- Data + Images Section -->
+<section class="content-section" id="about">
+  <!-- Left Column (70%) -->
+  <div class="content-text">
+    <h1>Why Join Awareness Program</h1>
+    <p>🌱 <strong>Fun + Learning Together:</strong> Be part of exciting quizzes, activities, and challenges made just for Class VI to X students.</p>
+    <p>🎁 <strong>Win Big Rewards:</strong> Grab cool gifts and scholarships that make your efforts truly worth it.</p>
+    <p>⚡ <strong>Go Green, Go Future:</strong> Learn about electric vehicles (EVs) and how you can help build a cleaner, smarter India.</p>
+    <p>⭐ <strong>Show Your Talent:</strong> Sharpen your knowledge, boost your confidence and stand out as a future innovator.</p>
+    <p>🚀 <strong>Be Future-Ready:</strong> Explore skills that connect today's learning with tomorrow's careers.</p>
+    <p>🌍 <strong>Be Part of the Change:</strong> Join thousands of students making a difference by choosing sustainability and smart ideas.</p>
+  </div>
+
+  <!-- Right Column (30%) -->
+  <div class="content-images">
+    <img src="assets/aiease_1758969482010.jpg" alt="Image 1">
+    <img src="assets/person-using-ar-technology-perform-their-occupation (1).jpg" alt="Image 2">
+    <img src="assets/aiease_1758969625804.jpg" alt="Image 3">
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Enroll Section -->
+<section class="enroll-section" id="enroll">
+  <!-- First Division: Two Titles -->
+  <div class="enroll-header">
+    <div class="enroll-title">
+      <h2>Enroll now with ₹499</h2>
+    </div>
+    <div class="enroll-title">
+      <h2 style="color: red;">( 90% off on ₹4999 )</h2>
+    </div>
+  </div>
+
+  <!-- Second Division: Three Boxes -->
+  <div class="enroll-boxes">
+    <div class="enroll-box">
+      <h3>Just ₹499 (90% off)</h3>
+      <p>Per student participation fee ensures accessibility while maintaining premium quality education.</p>
+    </div>
+    <div class="enroll-box">
+      <h3>Complete package</h3>
+      <p>Covers online training, comprehensive exams, official certification and exciting awards for top performers.</p>
+    </div>
+    <div class="enroll-box">
+      <h3>Quality learning</h3>
+      <p>Professional grade content delivered by industry experts with real-world insights and access for all.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Two Column Section -->
+<section class="two-column-section">
+  <!-- Left Column: Image -->
+  <div class="column-image">
+    <img src="assets/_person offering colourful gift bag .jpg" alt="About Image">
+  </div>
+
+  <!-- Right Column: Title + Text -->
+  <div class="column-text">
+    <h2>Every registration comes with an exciting gift</h2>
+    <p>Register now and unwrap your surprise gift</p>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Details Section -->
+<section class="details-section" id="program">
+  <!-- Division 1: Section Title -->
+  <div class="details-header">
+    <h2>3 Day Online Learning Journey</h2>
+  </div>
+
+  <!-- Division 2: Three Boxes -->
+  <div class="details-boxes">
+    <div class="details-box">
+      <h1>Day 1</h1>
+      <h2>The Green Awakening</h2>
+      <p>
+        Fun stories and games on why clean air matters. Simple sustainable habits for kids, families and schools.
+      </p>
+    </div>
+    <div class="details-box">
+      <h1>Day 2</h1>
+      <h2>Path to Green Living</h2>
+      <p>
+        The cost of fuel vs. the savings of green choices. How EVs, solar and renewable energy make life easier & cheaper.
+      </p>
+    </div>
+    <div class="details-box">
+      <h1>Day 3</h1>
+      <h2>Future on Wheels</h2>
+      <p>
+        Why EVs are India's road to a healthier tomorrow. Exploring career opportunities in green technologies.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Awards Section -->
+<section class="awards-section" id="awards">
+  <!-- Left Column (30%) -->
+  <div class="awards-left">
+    <h2>Exclusive Awards & Rewards</h2>
+    <p>
+      Win exclusive awards, rewards and certificates by excelling in the program.
+    </p>
+  </div>
+
+  <!-- Right Column (70%) -->
+  <div class="awards-right">
+    <div class="award-box">
+      <h3>₹75,000 value Tablets</h3>
+      <p>Providing tablets worth ₹15,000 each to three deserving students to support their education.</p>
+    </div>
+    <div class="award-box">
+      <h3>One lakh value scholarships</h3>
+      <p>Offering scholarships worth ₹10,000 each to ten deserving students to support their academic journey.</p>
+    </div>
+    <div class="award-box">
+      <h3>₹30,000/- value Cash Prizes</h3>
+      <p>Awarding cash prizes of ₹2,000 each to fifteen students in recognition of their efforts and achievements.</p>
+    </div>
+    <div class="award-box">
+      <h3>Other Recognitions</h3>
+      <p>Certificates to all remaining students to recognize their participation and dedication. A gesture for their value and participation.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Features Section -->
+<section class="features-section">
+  <!-- Main Heading -->
+  <h2 class="features-heading">Benefits to Schools, Students & Parents</h2>
+
+  <!-- Container with 3 Divisions -->
+  <div class="features-container">
+    <div class="feature-box">
+      <img src="assets/school outside.jpg" alt="Feature 1">
+      <h3>Schools</h3>
+      <ul>
+        <li>Build reputation as a forward-thinking, eco-conscious institution</li>
+          
+        <li>Recognition as eco-mentors at district & state level grand event association with Royal EV, a pioneer in EV innovation.</li>
+      </ul>
+        
+      
+    </div>
+
+    <div class="feature-box">
+      <img src="assets/The Importance of Outdoor Learning.jpg" alt="Feature 2">
+      <h3>Students</h3>
+      <ul>
+        <li>   Opportunity to win scholarships, Tablets and Medals.</li>
+        <li>Learn about the 21st-century sustainable skills.</li>
+        <li>Gain participation certificates that add values to profiles.</li>
+      </ul>
+      
+    </div>
+
+    <div class="feature-box">
+      <img src="assets/father and mother teaching their children.jpg" alt="Feature 3">
+      <h3>Parents</h3>
+        <ul>
+          <li>Affordable fee ₹399 with high-value learning & rewards; Parents discover cost-effective green living solutions </li>
+
+        <li>Families become Green Champions for their community.</li>
+      </ul>
+        
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Policies Section -->
+<section class="policies-section">
+  <!-- Main Title -->
+  <h2 class="policies-heading">Alignment with National Initiatives</h2>
+
+  <!-- Container with 3 Divisions -->
+  <div class="policies-container">
+    <div class="policy-box">
+      <h3>National Education Policy (NEP 2020)</h3>
+      <ul>
+        <li>Encourages skill-based learning & innovation.</li> 
+        <li>Focus on experimental learning & technology services.</li> 
+        <li>Supports career exposure program for students.</li> 
+        <li>To make education more holistic.</li>
+      </ul>
+    </div>
+
+    <div class="policy-box">
+      <h3>Skill India & Green Initiatives</h3>
+      <ul>
+        <li>Promotes industry-linked skill development for youth.</li> 
+        <li>Focus on sustainability & clean technologies.</li> 
+        <li>Government push towards Electric Vehicles (EV Mission 2030).</li>
+      </ul>
+    </div>
+
+    <div class="policy-box">
+      <h3>How Royal EV Program Fits In</h3>
+      <ul>
+        <li>Combines scholarships, skill learning and green awareness.</li> 
+        <li>Students gain knowledge in future EV technologies.</li> 
+        <li>Schools become partners in implementing NEP-driven learning m.</li>
+    </ul>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Contact Section -->
+<section class="contact-section" id="register">
+  <!-- Main Title -->
+  <h2 class="contact-heading">Register yourself for the program</h2>
+
+  <!-- Container -->
+  <div class="contact-container">
+    <!-- Left Division (Image) -->
+    <div class="contact-image">
+      <img src="assets/Buoni Propositi per l'Anno Nuovo_ come Scrivere Obiettivi Raggiungibili per il 2021.jpg" alt="Contact Us">
+    </div>
+
+    <!-- Right Division (Form) -->
+    <div class="contact-form">
+      <form>
+        <h3>Fill the form</h3>
+
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mobile">Mobile</label>
+          <input type="number" id="mobile" placeholder="Enter your number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="school">School</label>
+          <input type="text" id="school" placeholder="Enter your school name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="state">State</label>
+          <input type="text" id="state" placeholder="Enter your state" required>
+        </div>
+
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" placeholder="Enter your city" required>
+        </div>
+
+        <div class="form-group">
+          <label for="area">Area</label>
+          <input type="text" id="area" placeholder="Enter your area" required>
+        </div>
+
+        <div class="form-group">
+          <label for="pincode">Pincode</label>
+          <input type="text" id="pincode" placeholder="Enter pincode" required>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Gallery Section -->
+<section class="gallery-section">
+  <!-- Main Title -->
+  <h2 class="gallery-heading">Our Gallery</h2>
+
+  <!-- Image Container -->
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="assets/aiease_1757912475174.jpg" alt="Gallery 1">
+    </div>
+    <div class="gallery-item">
+      <img src="assets/aiease_1757912602337.jpg" alt="Gallery 2">
+    </div>
+    <div class="gallery-item">
+      <img src="assets/20250316_161918.jpg" alt="Gallery 3">
+    </div>
+    <div class="gallery-item">
+      <img src="assets/aiease_1758969625804.jpg" alt="Gallery 4">
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Join Us Section -->
+<section class="join-section" id="joinus">
+  <!-- Main Title -->
+  <h2 class="join-heading">Become a coordinator</h2>
+
+  <!-- Container -->
+  <div class="join-container">
+    <!-- Left Division (Image) -->
+    <div class="join-image">
+      <img src="assets/Data Science Meeting.jpg" alt="Join Us">
+    </div>
+
+    <!-- Right Division (Form) -->
+    <div class="join-form">
+      <form>
+        <h3>Fill the form to work with us</h3>
+        
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email-join">Email</label>
+          <input type="email" id="email-join" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="Phone">Mobile</label>
+          <input type="number" id="mobile" placeholder="Enter your number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="text">State</label>
+          <input type="text" id="state" placeholder="Enter your state" required>
+        </div>
+
+        <div class="form-group">
+          <label for="text">District</label>
+          <input type="text" id="district" placeholder="Enter your district" required>
+        </div>
+
+        <div class="form-group">
+          <label for="text">City</label>
+          <input type="text" id="city" placeholder="Enter your City" required>
+        </div>
+
+        <div class="form-group">
+          <label for="text">Area</label>
+          <input type="text" id="area" placeholder="Enter your area" required>
+        </div>
+
+        <div class="form-group">
+          <label for="text">Pincode</label>
+          <input type="text" id="pincode" placeholder="Enter pincode" required>
+        </div>
+
+        <button type="submit">Join Now</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Contact Details -->
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+      <p><strong>Phone:</strong> +91 630 349 9567</p>
+      <p><strong>Email:</strong> skillhub@vgk4u.com</p>
+    </div>
+
+    <!-- Office Address -->
+    <div class="footer-box">
+      <h3>Our Office</h3>
+      <p>Desapatrunipalem<br>
+         Visakhapatnam<br>
+         Andhrapradesh</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 vgk4u. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
