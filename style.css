@@ -211,6 +211,7 @@
   }
   .enroll-header {
     flex-direction: column;
+   
     align-items: center;
     text-align: center;
   }
@@ -250,11 +251,11 @@
 
 
 .two-column-section {
-  min-height: 60vh;
+  
   display: flex;
   align-items: stretch;   /* ✅ ensures equal height */
   justify-content: center;
-  padding: 60px 8%;
+  padding: 40px 8%;
   gap: 40px;
   box-sizing: border-box;
 }
@@ -269,7 +270,7 @@
 
 .column-image img {
   width: 100%;
-  height: 100%;          /* ✅ make image stretch equal to text height */
+  height: 80%;          /* ✅ make image stretch equal to text height */
   border-radius: 10px;
   object-fit: cover;
 }
@@ -310,6 +311,11 @@
     height: auto; /* reset so it doesn’t stretch weirdly */
   }
 
+  .column-image1 img {
+    width: 100%;
+    height: auto;
+  }
+
   .column-text {
     padding: 30px 10px;
   }
@@ -318,8 +324,20 @@
     font-size: 2.5rem;
   }
 
+  .column-text1 h1 {
+    font-size: 2.3rem;
+  }
+
+  .column-text1 h2{
+    font-size: 1.5rem;
+  }
+
   .column-text p {
     font-size: 1.5rem;
+  }
+
+  .column-text1 p {
+    font-size: 1rem;
   }
 }
 
@@ -333,10 +351,68 @@
     font-size: 2rem;
   }
 
+
+  .column-text1 h1 {
+    font-size: 2rem;
+  }
+  
+  .column-text1 h2 {
+   font-size: 1.5rem;
+  }
+
   .column-text p {
     font-size: 1rem;
   }
+
+  .column-text1 p {
+    font-size: 1rem;
+  }
 }
+
+
+
+
+
+
+
+
+.column-text1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ✅ vertically center text */
+  
+}
+.column-image1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.column-image1 img{
+  width: 100%;
+  height: 100%;          /* ✅ make image stretch equal to text height */
+  border-radius: 10px;
+  object-fit: cover;
+}
+.column-text1 h1{
+  font-family: playfair display;
+  font-weight: 540;
+  font-size: 3rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+.column-text1 p{
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #ff9800;
+}
+.column-text1 h2{
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
 
 
 
